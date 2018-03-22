@@ -21,19 +21,24 @@ public class GithubAdapter extends RecyclerView.Adapter<GithubAdapter.GithubView
     @Override
     public GithubViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_repositories, parent, true);
+                .inflate(R.layout.item_repositories, parent, false);
         return new GithubViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GithubViewHolder holder, int position) {
-        String name = itemList.get(position).getName();
+        String name = itemList.get(position).getFullName();
         holder.txtRepositoryName.setText(name);
     }
 
     @Override
     public int getItemCount() {
         return itemList.size();
+    }
+
+    public void addRepositoryList(List<Item> list) {
+        itemList.addAll(list);
+        notifyDataSetChanged();
     }
 
     static class GithubViewHolder extends RecyclerView.ViewHolder {
