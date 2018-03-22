@@ -1,4 +1,4 @@
-package com.jhowcs.viewmodel;
+package com.jhowcs.githubapp.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;

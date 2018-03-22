@@ -13,8 +13,8 @@ import com.jhowcs.githubapp.R;
 import com.jhowcs.githubapp.model.GithubModel;
 import com.jhowcs.githubapp.model.Item;
 import com.jhowcs.githubapp.repository.network.GithubRepository;
-import com.jhowcs.viewmodel.MainViewModel;
-import com.jhowcs.viewmodel.MainViewModelFactory;
+import com.jhowcs.githubapp.viewmodel.MainViewModel;
+import com.jhowcs.githubapp.viewmodel.MainViewModelFactory;
 
 import java.util.List;
 
