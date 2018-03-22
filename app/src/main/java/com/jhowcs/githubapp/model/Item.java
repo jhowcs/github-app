@@ -1,5 +1,5 @@
 
-package com.jhowcs.githubapp.data.model;
+package com.jhowcs.githubapp.model;
 
 import com.google.gson.annotations.SerializedName;
 

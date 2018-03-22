@@ -10,7 +10,7 @@
   >
 
   <TextView
-    android:id="@+id/repositorie_name"
+    android:id="@+id/txtRepositoryName"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:textSize="24sp"
