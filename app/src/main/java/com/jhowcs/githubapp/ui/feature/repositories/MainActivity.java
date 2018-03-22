@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.jhowcs.githubapp.R;
 import com.jhowcs.githubapp.model.GithubModel;
@@ -36,13 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         MainViewModelFactory factory = new MainViewModelFactory(new GithubRepository());
         viewModel = ViewModelProviders.of(this, factory).get(MainViewModel.class);
-        viewModel.getAndroidRepostitories().observe(this, new Observer<GithubModel>() {
+        viewModel.getAndroidRepositories().observe(this, new Observer<GithubModel>() {
             @Override
             public void onChanged(@Nullable GithubModel githubModel) {
                 List<Item> items = githubModel.getItems();
-
-                for (Item item : items)
-                    Log.d(TAG, "onChanged: " + item.getFullName());
+                adapter.addRepositoryList(items);
             }
         });
     }
