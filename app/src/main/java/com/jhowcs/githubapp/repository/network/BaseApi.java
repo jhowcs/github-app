@@ -24,7 +24,7 @@ public class BaseApi {
     }
 
     @VisibleForTesting
-    public void switchRetrofitInstanceForTest(Retrofit retrofit) {
+    public static void switchRetrofitInstanceForTest(Retrofit retrofit) {
         INSTANCE = retrofit;
     }
 }
